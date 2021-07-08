@@ -1,0 +1,30 @@
+.wrapper {
+    line-height: 24px;
+    font-size: 18px;
+}
+.table {
+    display: flex;
+    flex-direction: column;
+}
+.row-header {
+border: 2px solid #d0cbd1;
+font-size: 22px;
+display: flex;
+flex-direction: row;
+}
+.row-header > .cell{
+    border-left: 2px solid #d0cbd1;
+    width: 40%;
+    padding: 5px;
+}
+.row-header > .cellAct {
+    width: 20%;
+    border-left: 2px solid #d0cbd1;
+    padding: 5px;
+}
+.row{
+    border: 2px solid #d0cbd1;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+}

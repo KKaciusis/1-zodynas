@@ -7,7 +7,6 @@ body {
 }
 
 main {
-    display: inline-block;
     width: 1000px;
     position: absolute;
     left: 50%;
@@ -62,7 +61,7 @@ input:focus {
     margin-top: 35px;
 }
 
-button {
+.topInputs > .subtn > button {
     font-size: 25px;
     background-color: white;
     border: 2px solid #a70dd6;
