@@ -1,4 +1,5 @@
-@import url(./table.css);
+@import url(./conponents/table.css);
+@import url(./conponents/top-inputs.css);
 
 body {
     margin: 0;
@@ -14,68 +15,3 @@ main {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.topinputs {
-    margin: 0;
-    gap: 20px;
-}
-
-.winput {
-    box-sizing: content-box;
-    display: flex;
-    flex-direction: column;
-    float: left;
-    border: 2px solid #d0cbd1;
-    margin: 25px;
-    height: 50px;
-    width: 35%;
-}
-
-.winput > input {
-    border: none;
-    height: 30px;
-    font-size: 18px;
-    text-align: center;
-}
-
-.winput:focus-within {
-    border: 2px solid  #a70dd6;
-    border-radius: 6px;
-    box-shadow: 0px 4px 8px 0px #0008;
-}
-
-input:focus {
-    outline: none;
-}
-
-.winput > label {
-    text-align: center;
-    font-size: 20px;
-}
-
-.subtn {
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    float: left;
-    gap: 20px;
-    margin-top: 35px;
-}
-
-.topInputs > .subtn > button {
-    font-size: 25px;
-    background-color: white;
-    border: 2px solid #a70dd6;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-button:hover {
-    cursor: pointer;
-    border: 3px solid #a70dd6;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px 0px #0008;
-}
-
-hr {
-    border: 2px solid #d0cbd1;
-    width: 100%;
-}

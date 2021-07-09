@@ -3,27 +3,27 @@
     font-size: 18px;
 }
 .table {
-    display: flex;
-    flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 .row-header {
-border: 2px solid #d0cbd1;
+border: 1px solid #d0cbd1;
 font-size: 22px;
 display: flex;
 flex-direction: row;
 }
-.row-header > .cell{
-    border-left: 2px solid #d0cbd1;
+.row-header > .cell , .table > .row > .cell {
+    border-left: 1px solid #d0cbd1;
     width: 40%;
     padding: 5px;
 }
-.row-header > .cellAct {
+.row-header > .cellAct , .table > .row > .cellAct {
     width: 20%;
-    border-left: 2px solid #d0cbd1;
+    border-left: 1px solid #d0cbd1;
     padding: 5px;
 }
 .row{
-    border: 2px solid #d0cbd1;
+    border: 1px solid #d0cbd1;
     font-size: 22px;
     display: flex;
     flex-direction: row;
