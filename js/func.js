@@ -60,13 +60,7 @@ class Dictionary {
                 <div class="cell">Lithuanian</div>
                 <div class="cellAct">Actions</div>
             </div>
-            <div class="row">
-                <div class="cell" data-title="English">Cow</div>
-                <div class="cell" data-title="Lithuanian">Karve</div>
-                <div class="cellAct" data-title="Actions">
-                    <button class="editBtn">edit</button>
-                    <button class="deleteBtn">Delete</button>
-                </div>
+            
             </div>
         </div>
       </div>`;
