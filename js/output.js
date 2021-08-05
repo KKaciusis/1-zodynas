@@ -47,12 +47,11 @@
                 <button class="deleteBtn">Delete</button>
             </div>
         </div>`;
+
+        let placement = document.getElementById('table');
     
-            this.DOM.insertAdjacentHTML("afterbegin", HTML);
+            placement.insertAdjacentHTML("beforeEnd", HTML);
         }
     
     }
-
-    
-
-document.getElementById(".save").addEventListener("click", () => {export { DictionaryOutput }})
+    export { DictionaryOutput };

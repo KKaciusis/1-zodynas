@@ -31,14 +31,15 @@ class Dictionary {
         this.DOM = document.querySelector(this.selector);
 
         if (!this.DOM) {
-            console.error("Pagal pateikta selector, elementas neegzistuoja");
+            console.error("ERROR: Pagal pateikta selector, elementas neegzistuoja");
             return false;
         }
         return true;
     }
 
     render() {
-        const HTML = `<header class="topInputs">
+        const HTML = `
+    <header class="topInputs">
         <div class="winput">
             <label for="english">English</label>
             <input id="entext" type="text">
@@ -54,7 +55,7 @@ class Dictionary {
         <hr />
     </header>
     <div class="wrapper">
-        <div class="table">
+        <div class="table" id="table">
             <div class="row-header">
                 <div class="cell">English</div>
                 <div class="cell">Lithuanian</div>
@@ -63,7 +64,7 @@ class Dictionary {
             
             </div>
         </div>
-      </div>`;
+    </div>`;
 
         this.DOM.insertAdjacentHTML("afterbegin", HTML);
     }
