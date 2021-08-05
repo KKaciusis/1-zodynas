@@ -15,7 +15,6 @@ class Dictionary {
         if (this.isValidSelector() && this.findTargetElement()) {
             this.render();
             this.addEvents();
-            return true;
         }
         else {
             return false;
@@ -82,11 +81,29 @@ class Dictionary {
             
             const lt = this.lttextDOM.value;
             const en = this.entextDOM.value;
-            
-        })
+
+            if (this.isValidInput(lt, en)) {
+                console.log("inputs are valid");
+            } else {
+                console.log("inputs are not valid");
+
+            }
+
+        });
     }
+    isValidInput (lt, en) {
+        if (!isValidLt(lt) || !isValidEn(en)){
+            return false;
+        }
+        return true;
+    }
+    isValidLt(lt){
 
-
+        return true;
+    }
+    isValidEn(en){
+        return true;
+    }
 }
 
 export { Dictionary }
