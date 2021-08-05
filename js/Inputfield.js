@@ -6,11 +6,15 @@ class Dictionary {
         this.selector = selector;
 
         this.DOM = null;
+        this.entextDOM = null;
+        this.lttextDOM = null;
+        this.saveButtonDOM = null;
     }
 
     init() {
         if (this.isValidSelector() && this.findTargetElement()) {
             this.render();
+            this.addEvents();
             return true;
         }
         else {
@@ -39,21 +43,21 @@ class Dictionary {
 
     render() {
         const HTML = `
-    <header class="topInputs">
+    <form class="topInputs">
         <div class="winput">
             <label for="english">English</label>
-            <input id="entext" type="text">
+            <input class="entext" id="entext" type="text">
         </div>
         <div class="winput">
             <label for="lithuanian">Lithuanian</label>
-            <input id="lttext" type="text">
+            <input class="lttext" id="lttext" type="text">
         </div>
         <div class="subtn">
         <button class="save" type="submit">Save</button>
         <button class="rerset" type="reset">Reset</button>
         </div>
         <hr />
-    </header>
+    </form>
     <div class="wrapper">
         <div class="table" id="table">
             <div class="row-header">
@@ -67,7 +71,21 @@ class Dictionary {
     </div>`;
 
         this.DOM.insertAdjacentHTML("afterbegin", HTML);
+        this.saveButtonDOM = this.DOM.querySelector('button[type="submit"]');
+        this.entextDOM = this.DOM.querySelector('.entext')
+        this.lttextDOM = this.DOM.querySelector('.lttext')
     }
+
+    addEvents() {
+        this.saveButtonDOM.addEventListener('click', (e) => {
+            e.preventDefault()
+            
+            const lt = this.lttextDOM.value;
+            const en = this.entextDOM.value;
+            
+        })
+    }
+
 
 }
 
