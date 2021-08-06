@@ -42,34 +42,35 @@ class Dictionary {
 
     render() {
         const HTML = `
-    <form class="topInputs">
-        <div class="winput">
-            <label for="english">English</label>
-            <input class="entext" id="entext" type="text">
-        </div>
-        <div class="winput">
-            <label for="lithuanian">Lithuanian</label>
-            <input class="lttext" id="lttext" type="text">
-        </div>
-        <div class="subtn">
-        <button class="save" type="submit">Save</button>
-        <button class="rerset" type="reset">Reset</button>
-        </div>
-        <hr />
-    </form>
-    <div class="wrapper">
-        <div class="table" id="table">
-            <div class="row-header">
-                <div class="cell">English</div>
-                <div class="cell">Lithuanian</div>
-                <div class="cellAct">Actions</div>
-            </div>
-            
-            </div>
-        </div>
-    </div>`;
+            <form class="topInputs">
+                <div class="winput">
+                    <label for="english">English</label>
+                    <input class="entext" id="entext" >
+                </div>
+                <div class="winput">
+                    <label for="lithuanian">Lithuanian</label>
+                    <input class="lttext" id="lttext" >
+                </div>
+                <div class="subtn">
+                <button class="save" type="submit">Save</button>
+                <button class="rerset" type="reset">Reset</button>
+                </div>
+                <hr />
+            </form>
+            <div class="wrapper">
+                <div class="table" id="table">
+                    <div class="row-header">
+                        <div class="cell">English</div>
+                        <div class="cell">Lithuanian</div>
+                        <div class="cellAct">Actions</div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>`;
 
         this.DOM.insertAdjacentHTML("afterbegin", HTML);
+        
         this.saveButtonDOM = this.DOM.querySelector('button[type="submit"]');
         this.entextDOM = this.DOM.querySelector('.entext')
         this.lttextDOM = this.DOM.querySelector('.lttext')
@@ -86,24 +87,21 @@ class Dictionary {
                 console.log("inputs are valid");
             } else {
                 console.log("inputs are not valid");
-
             }
-
         });
     }
     isValidInput (lt, en) {
-        if (!isValidLt(lt) || !isValidEn(en)){
+        if(!this.isValidLt(lt) || !this.isValidEn(en)){
             return false;
         }
         return true;
     }
     isValidLt(lt){
+        return 'string' === typeof lt && '' !== lt;
 
-        return true;
     }
     isValidEn(en){
-        return true;
-    }
+        return 'string' === typeof en && '' !== en;
 }
-
+}
 export { Dictionary }
