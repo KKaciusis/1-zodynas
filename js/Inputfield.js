@@ -9,6 +9,8 @@ class Dictionary {
         this.entextDOM = null;
         this.lttextDOM = null;
         this.saveButtonDOM = null;
+
+        this.saveButtonCallback = null;
     }
 
     init() {
@@ -84,7 +86,7 @@ class Dictionary {
             const en = this.entextDOM.value;
 
             if (this.isValidInput(lt, en)) {
-                console.log("inputs are valid");
+                this.saveButtonCallback(lt, en);
             } else {
                 console.log("inputs are not valid");
             }
