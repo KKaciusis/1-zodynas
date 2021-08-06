@@ -6,11 +6,11 @@
             this.selector = selector;
     
             this.DOM = null;
+            this.listDom = null;
         }
     
         init() {
             if (this.isValidSelector() && this.findTargetElement()) {
-                this.render();
                 return true;
             }
             else {
@@ -37,21 +37,22 @@
             return true;
         }
     
-        render() {
-            const HTML = `
+
+
+        createRow (lt, en){
+            const HTML =`
             <div class="row">
-            <div class="cell" data-title="English">Cow</div>
-            <div class="cell" data-title="Lithuanian">Karve</div>
+            <div class="cell" data-title="English">${en}</div>
+            <div class="cell" data-title="Lithuanian">${lt}</div>
             <div class="cellAct" data-title="Actions">
                 <button class="editBtn">edit</button>
                 <button class="deleteBtn">Delete</button>
             </div>
-        </div>`;
-
-        let placement = document.getElementById('table');
-    
+            </div>`;
+            let placement = document.getElementById('table');
             placement.insertAdjacentHTML("beforeEnd", HTML);
-        }
+
+        };
     
     }
     export { DictionaryOutput };

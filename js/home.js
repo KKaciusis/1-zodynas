@@ -5,4 +5,5 @@ const dictionary = new Dictionary (".dictionary");
 dictionary.init();
 
 const dictionaryOutput = new DictionaryOutput (".dictionary")
-dictionaryOutput.init();
+dictionaryOutput.createRow('chicken', 'burokas');
+dictionaryOutput.createRow('chicken', 'burokas');
